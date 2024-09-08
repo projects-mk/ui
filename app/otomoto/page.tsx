@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Tabs, Stack, Button, Text, Space, Select, Notification, TextInput } from '@mantine/core';
+import { Tabs, Stack, Button, Text, Select, Notification, TextInput } from '@mantine/core';
 import axios from 'axios';
-import Description from './description';
+
 async function fetchData(url: string): Promise<[boolean, any]> {
   try {
     const response = await axios.get(url);
@@ -90,7 +90,7 @@ export default function Home() {
         </Tabs.Tab>
       </Tabs.List>
       <Tabs.Panel value="description">
-        <Description />
+        <Text>Description</Text>
       </Tabs.Panel>
 
       <Tabs.Panel value="implementation">
